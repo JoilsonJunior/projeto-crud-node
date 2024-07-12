@@ -1,13 +1,16 @@
 // COMINICAÇÃO DO BANCO COM O RENDER
 const Sequelize = require("sequelize");
 
+// Verificar se a senha é 'none' e substituir por uma string vazia
+const dbPassword = process.env.DB_PASSWORD === 'none' ? '' : process.env.DB_PASSWORD;
+
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
-  process.env.DB_PASSWORD,
+  dbPassword,
   {
     host: process.env.DB_HOST,
-    port: process.env.DB_PORT, // A porta do MySQL
+    port: process.env.DB_PORT,
     dialect: "mysql",
     define: {
       charsets: "utf8",
@@ -18,7 +21,7 @@ const sequelize = new Sequelize(
   }
 );
 
-// TESTANDO A CONEXÃO COM O BANCO
+// Testando a conexão com o banco
 sequelize.authenticate().then(() => {
   console.log("Conexão com o banco realizada com sucesso");
 }).catch((err) => {
