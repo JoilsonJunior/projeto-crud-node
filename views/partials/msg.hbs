@@ -1,0 +1,18 @@
+{{#if MsgSuccess}}
+<div id="notification"  class="alert alert-success d-flex align-items-center" role="alert" data-bs-theme="dark">
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-check-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Check:">
+    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm3.354 4.646a.5.5 0 1 0-.708-.708L7 9.293 5.354 7.646a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l4-4z"/>
+  </svg>
+  <div>
+    Cadastro realizado com sucesso!
+  </div>
+</div>
+{{/if}}
+
+{{!-- each: significa pecorrer uma array --}}
+{{#each error}}
+<div id="notification"  class="alert alert-danger" role="alert" data-bs-theme="dark">
+   {{mensagem}}
+</div>
+
+{{/each}}

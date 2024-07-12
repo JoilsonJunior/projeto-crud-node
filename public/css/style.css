@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* display: flex; */
+  background: #0b0b0c;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.nav {
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 900px;
+  margin-top: 60px;
+}
+
+.estrutura {
+  background: #232324b0;
+  color: white;
+  border: 300px;
+}
+
+.form-control {
+  background: #121214;
+  border: none;
+  border: 1px solid #4f4f50;
+  padding: 11px;
+  color: white;
+}
+
+.form-control::placeholder {
+  color: #70707d;
+  font-size: 15px;
+}
+
+.form-control:focus {
+  background-color: #121214;
+  outline: none;
+  border: 1px solid #9956f6;
+  box-shadow: none;
+  color: white;
+}
+
+.btn-success {
+  background: #9956f6;
+  border: none;
+}
+
+.edit {
+  background: #018121;
+  border: none;
+}
+
+.edit:hover {
+  background: #006419;
+  border: none;
+}
+
+.fa-edit {
+  color: white;
+}
+
+.table {
+  --bs-table-bg: #12121400;
+  --bs-table-color: white;
+  --bs-table-border-color: #4f4f5085;
+  --bs-table-striped-color: white;
+}
+
+.table > thead {
+  --bs-table-bg: #9956f6;
+}
+
+#notification {
+  opacity: 1;
+  transition: opacity 2s ease-out;
+}
+
+#notification.hide {
+  opacity: 0;
+}
